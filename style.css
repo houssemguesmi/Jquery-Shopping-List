@@ -1,0 +1,15 @@
+.images {
+  height: 60px;
+  width: 60px;
+}
+#error {
+  color: red;
+  font-weight: bold;
+  display: none;
+}
+#form {
+  display: none;
+}
+#submit {
+  bottom: 1000px;
+}
