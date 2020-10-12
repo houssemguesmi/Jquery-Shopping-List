@@ -1,5 +1,6 @@
 $("#form").fadeIn(2500);
-$("#submit").on("click", function () {
+$("#submit").on("click", function (e) {
+  e.preventDefault();
   var item = $("#item").val();
   var url = $("#url").val();
   var list = $("#list");
@@ -16,7 +17,8 @@ $("#submit").on("click", function () {
     $("#error").val("Please fill in all the inputs!");
   }
 });
-$("#submitBG").on("click", function () {
+$("#submitBG").on("click", function (e) {
+  e.preventDefault();
   var color = $("#color").val();
   if (color !== "") {
     $("body").css("background-color", color);
