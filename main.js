@@ -1,19 +1,25 @@
 $("#form").fadeIn(2500);
-$('#title').fadeIn(2500)
+$("#title").fadeIn(2500);
 $("#submit").on("click", function (e) {
   e.preventDefault();
-  var item = $("#item").val();
-  var url = $("#url").val();
+  var itemVal = $("#item").val();
+  var urlVal = $("#url").val();
   var list = $("#list");
-  if (item !== "" && url !== "") {
-    list.append("<li class='listitems' style='display:none'><img class='images' src='" + url + "'><span class='item'>" + item + "</span></li><br>");
-    $('.listitems').fadeIn(1500)
+  var item = $("<li class='listitems' style='display:none'></li>");
+  var image = $("<img class='images' src='" + urlVal + "'>");
+  var span = $("<span class='item'>" + itemVal + "</span>");
+  if (itemVal !== "" && urlVal !== "") {
+    item.append(image);
+    item.append(span);
+    list.append(item);
+    list.append("<br>");
+    $(".listitems").fadeIn(1500);
     $("#error").fadeOut(1500);
     $("#error").val("");
     $("#url").val("");
     $("#item").val("");
-    $("#form").animate({ marginBottom: "150px"}, 2500);
-    $("#form").animate({ marginBottom: "0px"}, 2500);
+    $("#form").animate({ marginBottom: "150px" }, 2500);
+    $("#form").animate({ marginBottom: "0px" }, 2500);
   } else {
     $("#error").fadeIn(2500);
     $("#error").val("Please fill in all the inputs!");
