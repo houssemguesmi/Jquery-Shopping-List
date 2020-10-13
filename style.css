@@ -7,9 +7,15 @@
   font-weight: bold;
   display: none;
 }
-#form {
+#form,
+#title {
   display: none;
 }
 #submit {
   bottom: 1000px;
+}
+.item {
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 10px;
 }
