@@ -8,41 +8,49 @@
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-    <center>
-      <h1 id='title'>
-        <span class="badge badge-secondary">Shopping-List</span>
-      </h1>
-    </center>
-    <form id="form">
-      <label>Color Changing: </label>
-      <input id="color" type="color" placeholder="Type Your Background Color" />
-      <button class="btn btn-primary" id="submitBG">Change BG</button>
-      <hr />
-      <div class="input-group">
-        <input
-          class="form-control"
-          aria-label="Sizing example input"
-          aria-describedby="inputGroup-sizing-sm"
-          id="item"
-          type="text"
-          placeholder="Type Your Shopping Item"
-        />
-        <input
-          class="form-control"
-          aria-label="Sizing example input"
-          aria-describedby="inputGroup-sizing-sm"
-          id="url"
-          type="text"
-          placeholder="Type Your Image URL"
-        />
-        <button id="submit" class="btn btn-primary">Submit</button>
+    <div class="grid-container">
+      <div class='sidebar'>
+        <button type='button' id='toggle-button' class='btn btn-primary'><i class="fa fa-bars"></i></button>         
       </div>
-      <input type="text" disabled id="error" />
-      <hr />
-    </form>
-    <ul id="list"></ul>
+      <div class='content'>
+        <center>
+          <h1 id='title'>
+            <span class="badge badge-secondary">Shopping-List</span>
+          </h1>
+        </center>
+        <form id="form">
+          <label>Color Changing: </label>
+          <input id="color" type="color" placeholder="Type Your Background Color" />
+          <button class="btn btn-primary" id="submitBG">Change BG</button>
+          <hr />
+          <div class="input-group">
+            <input
+              class="form-control"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-sm"
+              id="item"
+              type="text"
+              placeholder="Type Your Shopping Item"
+            />
+            <input
+              class="form-control"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-sm"
+              id="url"
+              type="text"
+              placeholder="Type Your Image URL"
+            />
+            <button id="submit" class="btn btn-primary">Submit</button>
+          </div>
+          <input type="text" disabled id="error" />
+          <hr />
+        </form>
+        <ul id="list"></ul>
+      </div>
+    </div>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

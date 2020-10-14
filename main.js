@@ -1,3 +1,12 @@
+var clicked = false
+$('#toggle-button').on("click",function(){
+  if(!clicked) {
+    $('.sidebar').animate({width:"100%"},1500)
+  } else {
+    $('.sidebar').animate({width:"10%"},1500)
+  }
+  clicked = !clicked
+})
 $("#form").fadeIn(2500);
 $("#title").fadeIn(2500);
 $("#submit").on("click", function (e) {
